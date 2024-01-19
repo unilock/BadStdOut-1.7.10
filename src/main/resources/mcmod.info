@@ -1,0 +1,25 @@
+{
+	"modListVersion": 2,
+	"modList": [{
+		"modid": "${modId}",
+		"name": "${modName}",
+		"description": "BadStdOut for Forge 1.7.10",
+		"version": "${modVersion}",
+		"mcversion": "${minecraftVersion}",
+		"url": "https://github.com/unilock/BadStdOut-1.7.10",
+		"updateUrl": "",
+		"authorList": [
+			"Szum123321",
+			"RDKRACZ",
+			"unilock"
+		],
+		"credits": "",
+		"logoFile": "",
+		"screenshots": [],
+		"parent": "",
+		"requiredMods": [],
+		"dependencies": [],
+		"dependants": [],
+		"useDependencyInformation": true
+	}]
+}
