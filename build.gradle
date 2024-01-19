@@ -70,7 +70,7 @@ if (project.file('.git/HEAD').isFile() || project.file('.git').isFile()) {
 
 def out = services.get(StyledTextOutputFactory).create('an-output')
 
-def projectJavaVersion = JavaLanguageVersion.of(8)
+def projectJavaVersion = JavaLanguageVersion.of(17)
 
 boolean disableSpotless = project.hasProperty("disableSpotless") ? project.disableSpotless.toBoolean() : false
 boolean disableCheckstyle = project.hasProperty("disableCheckstyle") ? project.disableCheckstyle.toBoolean() : false
@@ -186,7 +186,7 @@ tasks.withType(ScalaCompile).configureEach {
 pluginManager.withPlugin('org.jetbrains.kotlin.jvm') {
     // If Kotlin is enabled in the project
     kotlin {
-        jvmToolchain(8)
+        jvmToolchain(17)
     }
     // Kotlin hacks our source sets, so we hack Kotlin's tasks
     def disabledKotlinTaskList = [
@@ -251,7 +251,7 @@ if (enableModernJavaSyntax.toBoolean()) {
             return
         }
         sourceCompatibility = 17 // for the IDE support
-        options.release.set(8)
+        options.release.set(17)
 
         javaCompiler.set(javaToolchains.compilerFor {
             languageVersion.set(JavaLanguageVersion.of(17))
