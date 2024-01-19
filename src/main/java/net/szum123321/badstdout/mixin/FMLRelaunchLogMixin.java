@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(FMLRelaunchLog.class)
+@Mixin(value = FMLRelaunchLog.class, remap = false)
 public class FMLRelaunchLogMixin {
     @Inject(method = "Lcpw/mods/fml/relauncher/FMLRelaunchLog;configureLogging()V", at = @At("RETURN"))
     private void configureLogging(CallbackInfo ci) {
